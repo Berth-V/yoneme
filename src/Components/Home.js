@@ -1,11 +1,10 @@
-
 import fondo1 from '../PreloadsImgs/portada6.1.jpg';
 
 function  Home()  {
   return (
   <>
     <div className='preloadBackgrounds'>
-      <img src={fondo1}/>
+      <img src={fondo1} alt='Fondo Yoneme'/>
     </div>
     <div className='home'>
       <div className='txt__container'>
