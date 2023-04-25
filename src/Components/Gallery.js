@@ -1,8 +1,9 @@
 import {useState, useCallback} from 'react';
 import ImageViewer from 'react-simple-image-viewer';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { motion } from 'framer-motion';
 
 function Gallery() {
-
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
   const openImageViewer = useCallback((index)=>{
@@ -13,38 +14,54 @@ function Gallery() {
     setCurrentImage(0);
     setIsViewerOpen(false);
   };
-  const imgs = [
-      'Img/img1.jpg',
-      'Img/img2.jpg',
-      'Img/img3.jpg',
-      'Img/img4.jpg',
-      'Img/img5.jpg',
-      'Img/img6.jpg',
-      'Img/img7.jpg',
-      'Img/img8.jpg',
-      'Img/img9.jpg',
-      'Img/img10.jpg',
-      'Img/img11.jpg',
-      'Img/img12.jpg',
-      'Img/img13.jpg',
-      'Img/img14.jpg',
-      'Img/img15.jpg',
-      'Img/img16.jpg'
+  const imgOpacityAnimation={
+    start:{opacity:0},
+    end:{
+      opacity:1,
+      transition:{
+        duration:1,
+        delay:1
+      }
+    }
+  }
+  const imgs=[
+      'Img/img1.avif',
+      'Img/img2.avif',
+      'Img/img3.avif',
+      'Img/img4.avif',
+      'Img/img5.avif',
+      'Img/img6.avif',
+      'Img/img7.avif',
+      'Img/img8.avif',
+      'Img/img9.avif',
+      'Img/img10.avif',
+      'Img/img11.avif',
+      'Img/img12.avif',
+      'Img/img13.avif',
+      'Img/img14.avif',
+      'Img/img15.avif',
+      'Img/img16.avif'
       ];
 
   return (
     <div className='gallery'>
       <div className='gallery__box'>
         {imgs.map((imgs, index)=>(
-          <div className='gallery__item'>
-            <img 
-            className='gallery__img'
-            src={imgs}
-            key={index}
-            alt="yoneme galeria"
-            onClick={()=>openImageViewer(index)}
-          />
-          </div>
+          <motion.div className='gallery__item'
+            variants={imgOpacityAnimation}
+            initial='start'
+            whileInView='end'
+            viewport={{
+              amount:0.5,
+              once:true
+            }}>
+            <LazyLoadImage className='gallery__img'
+              onClick={()=>openImageViewer(index)}
+              src={imgs}
+              key={index}
+              alt="yoneme galeria"
+            />
+          </motion.div>
           ))
         }
         {isViewerOpen && (

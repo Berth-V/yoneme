@@ -1,36 +1,31 @@
 import React from 'react';
-import LazyLoad from 'react-lazy-load';
-import { motion } from 'framer-motion';
-import baile from '../PreloadsImgs/mygif.gif'
+import baile from '../PreloadsImgs/mygif.webm'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function Gif() {
   return (
     <>
-    
     <div className='gif__container'>
-    
-      <LazyLoad threshold={0.5}>
-          <img
-          className='isaac'
-          src={'Img/isaac.png'}/>
-      </LazyLoad>
+      <LazyLoadImage
+        className='isaac'
+        src={'Img/isaac.avif'}
+        alt='yoneme pflc'  
+      />
       <div className='gif__box'>
-      <LazyLoad threshold={0.5}>
-          <motion.img
-          className='mygif' 
+        <video
           src={baile}
-          initial={{opacity:0}}
-          animate={{opacity:1}}
-          transition={{duration:1}}/>
-      </LazyLoad>
+          autoPlay
+          loop
+          className='mygif' 
+
+        />
       </div>
-      <LazyLoad threshold={0.5}>
-          <img
+          <LazyLoadImage
           className='mariella'
-          src={'Img/mariella.png'}/>
-      </LazyLoad>
+          src={'Img/mariella.avif'}
+          alt='yoneme pflc'
+          />
     </div>
-    
     </>
   )
 }
