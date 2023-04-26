@@ -1,9 +1,5 @@
 function Footer() {
-  return (
-    <footer className='footer'>
-      Copyright © BertDev 2023
-    </footer>
-  )
+  return <footer className='footer'>Copyright © BertDev 2023</footer>;
 }
 
-export default Footer
+export default Footer;
