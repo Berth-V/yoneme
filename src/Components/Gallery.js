@@ -18,7 +18,7 @@ function Gallery() {
     start: {opacity: 0},
     end: {
       opacity: 1,
-      transition:{ delay: 0.3}
+      transition: {delay: 0.3},
     },
   };
   const imgs = [

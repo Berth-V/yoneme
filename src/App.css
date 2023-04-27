@@ -893,7 +893,6 @@
 }
 
 @media screen and (max-width: 820px) {
-
   :root {
     --home-back-size: 225%;
   }
@@ -915,7 +914,6 @@
 }
 
 @media screen and (max-width: 768px) {
-
   .gif__box {
     height: 440px;
     width: 320px;
@@ -1173,10 +1171,6 @@
 }
 
 @media screen and (max-width: 375px) {
-  
-
-
-
   .gif__box {
     height: 400px;
     width: 300px;
@@ -1197,11 +1191,11 @@
   }
 
   .gif__container {
-    height: 80vh;
+    height: 90vh;
   }
 
   .gif__box {
-    height: 380px;
+    height: 360px;
     width: 280px;
   }
 
