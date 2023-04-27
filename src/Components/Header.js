@@ -11,6 +11,7 @@ function Header() {
   const handleClickAway = () => {
     setIsOpen(false);
   };
+  // Framer Motion Variables //
   const backgroundAnimation = {
     starts: {opacity: 1},
     ends: {

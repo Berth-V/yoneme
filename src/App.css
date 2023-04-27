@@ -19,6 +19,8 @@
   --footer-text-size: 16px;
 }
 
+/* Header Component */
+
 .header {
   height: auto;
   width: auto;
@@ -121,6 +123,8 @@
   height: auto;
 }
 
+/* Gif Component */
+
 .gif__container {
   height: 100vh;
   width: 100%;
@@ -154,6 +158,8 @@
   border-radius: 15px;
   margin-left: -260px;
 }
+
+/* About Component */
 
 .about {
   width: 100%;
@@ -209,6 +215,9 @@
   border: solid 1px var(--secondary-color);
   margin: 0;
 }
+
+/* Fprint Component */
+
 .component__fPrint {
   position: absolute;
   left: 0;
@@ -408,6 +417,8 @@
   height: 20px;
 }
 
+/* Gallery Component */
+
 .gallery {
   display: flex;
   justify-content: center;
@@ -445,6 +456,8 @@
   transition-duration: 0.5s;
   transition-timing-function: ease;
 }
+
+/* Contact Component */
 
 .contact {
   width: 100%;
@@ -515,6 +528,8 @@
   background-color: var(--secondary-color);
   border: solid 1px var(--secondary-color);
 }
+
+/* Footer Component */
 
 .footer {
   height: 50px;

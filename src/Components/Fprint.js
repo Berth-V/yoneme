@@ -1,5 +1,5 @@
 import {motion} from 'framer-motion';
-
+  // Framer Motion Variables //
 const printsAnimate = {
   starts: {opacity: 0},
   ends: {

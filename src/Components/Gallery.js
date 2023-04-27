@@ -14,6 +14,7 @@ function Gallery() {
     setCurrentImage(0);
     setIsViewerOpen(false);
   };
+    // Framer Motion Variables //
   const imgOpacityAnimation = {
     start: {opacity: 0},
     end: {
