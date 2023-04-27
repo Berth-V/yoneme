@@ -53,7 +53,7 @@ function Header() {
   };
   const toggleAnimation = {
     open: {right: 0},
-    closed: {right: -250},
+    closed: {right: -400},
   };
   const bar1Animation = {
     open: {
